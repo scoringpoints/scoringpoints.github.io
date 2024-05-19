@@ -21,3 +21,23 @@ function elementEventOnInput(event) {
 
     storage.setItem(target_element_id, event.target.innerText)
 }
+
+function removePlayer(element) {
+    console.log(element);
+}
+
+function addPlayer(element) {
+    console.log(element);
+}
+
+function showHidePlayerSettings(element) {
+    const player_settings = document.querySelectorAll(".player-settings");
+
+    player_settings.forEach((player_setting) => {
+        if (element.checked) {
+            player_setting.removeAttribute("hidden");
+        } else {
+            player_setting.setAttribute("hidden", "");
+        }
+    });
+}
