@@ -26,26 +26,17 @@ function removePlayer(element) {
     console.log(element);
 }
 
-function addPlayer(element) {
-    const parent_element = element.parentElement;
-    const parent_index = parent_element.dataset.index;
-
-    const parent_thead = element.parentNode;
-    // parent_thead.querySelectorAll(`tr[data-index=""]`)
-
-    const parent_table = parent_thead.parentNode;
-
-    // parent_table.querySelector('')
-
-
+function addPlayer(table_index, col_index) {
+    const table = document.querySelector(`table[data-table="${table_index}"]`)
+    table.querySelectorAll(`[data-col="${col_index}"]`).forEach(addElement);
 }
 
-// function addElement(main_element) {
-//     const new_element = main_element.cloneNode(true);
-//     const parent_element = main_element.parentElement;
+function addElement(main_element) {
+    const new_element = main_element.cloneNode(true);
+    const parent_element = main_element.parentElement;
 
-//     parent_element.insertBefore(new_element, main_element);
-// }
+    parent_element.insertBefore(new_element, main_element);
+}
 
 function showHidePlayerSettings(element) {
     const player_settings = document.querySelectorAll(".player-settings");
