@@ -1,6 +1,5 @@
 const storage = window.localStorage;
 const inputs = document.querySelectorAll("[contenteditable]");
-
 inputs.forEach((element) => {
     restoreDefaultValueInElement(element);
 
@@ -23,19 +22,19 @@ function elementEventOnInput(event) {
 }
 
 function removePlayer(element) {
-    console.log(element);
+    console.log(self)
+    // const table = document.querySelector(`table[data-table="${table_index}"]`);
+    // table.querySelectorAll(`[data-col="${col_index}"]`).forEach((element) => element.remove());
 }
 
 function addPlayer(table_index, col_index) {
-    const table = document.querySelector(`table[data-table="${table_index}"]`)
-    table.querySelectorAll(`[data-col="${col_index}"]`).forEach(addElement);
-}
-
-function addElement(main_element) {
-    const new_element = main_element.cloneNode(true);
-    const parent_element = main_element.parentElement;
-
-    parent_element.insertBefore(new_element, main_element);
+    // const table = document.querySelector(`table[data-table="${table_index}"]`);
+    // table.querySelectorAll(`[data-col="${col_index}"]`).forEach((element) => {
+    //     const new_element = element.cloneNode(true);
+    //     const parent_element = element.parentElement;
+    
+    //     parent_element.insertBefore(new_element, element);
+    // });
 }
 
 function showHidePlayerSettings(element) {
