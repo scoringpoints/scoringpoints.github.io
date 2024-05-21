@@ -27,8 +27,25 @@ function removePlayer(element) {
 }
 
 function addPlayer(element) {
-    console.log(element);
+    const parent_element = element.parentElement;
+    const parent_index = parent_element.dataset.index;
+
+    const parent_thead = element.parentNode;
+    // parent_thead.querySelectorAll(`tr[data-index=""]`)
+
+    const parent_table = parent_thead.parentNode;
+
+    // parent_table.querySelector('')
+
+
 }
+
+// function addElement(main_element) {
+//     const new_element = main_element.cloneNode(true);
+//     const parent_element = main_element.parentElement;
+
+//     parent_element.insertBefore(new_element, main_element);
+// }
 
 function showHidePlayerSettings(element) {
     const player_settings = document.querySelectorAll(".player-settings");
